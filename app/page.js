@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar";
 import AppHeader from "@/components/AppHeader";
-import IntroSection from "@/components/IntroSection";
-import ProductSummationSection from "@/components/ProductSummationSection";
-import OpenAIChatSection from "@/components/OpenAIChatSection";
+import SectionIntro from "@/components/SectionIntro";
+import SectionProductSummation from "@/components/SectionProductSummation";
+import SectionFortuneDrawer from "@/components/SectionFortuneDrawer";
+import SectionOpenAIChat from "@/components/SectionOpenAIChat";
 import AppFooter from "@/components/AppFooter";
 
 export default function Home() {
@@ -11,11 +12,13 @@ export default function Home() {
       <Navbar />
       <AppHeader title="認識 React States" />
       {/* 自我介紹產生器 */}
-      <IntroSection />
+      <SectionIntro />
       {/* 商品總價計算機 */}
-      <ProductSummationSection />
+      <SectionProductSummation />
+      {/* 抽張幸運籤 */}
+      <SectionFortuneDrawer />
       {/* 與AI聊天 */}
-      <OpenAIChatSection />
+      <SectionOpenAIChat />
       <AppFooter />
     </>
   );

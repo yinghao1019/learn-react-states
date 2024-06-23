@@ -5,17 +5,17 @@
 import SectionTitle from "@/components/SectionTitle";
 // TODO: 引入臺灣城市清單 參考 @/utils/taiwan-cities
 
-export default function IntroSection() {
+export default function SectionIntro() {
     // TODO: 將使用者會輸入的值定義為狀態(state)，讓元件可以將最新的狀態渲染(render)到畫面上
 
     // TODO: 將城市清單渲染成放在<select>內的<option>
     // 關於HTML select tag說明文件: https://www.w3schools.com/tags/tag_select.asp
 
     return (
-        <section id="IntroSection" className="border-b-2 py-14">
+        <section id="SectionIntro" className="border-b-2 py-14">
             <div className="container mx-auto px-3">
                 <SectionTitle
-                    title="設計一個自我介紹產生器"
+                    title="1. 設計一個自我介紹產生器"
                     subtitle="state若是被更新，畫面就會被react重新渲染。"
                 />
                 <div className="grid grid-cols-2 gap-10">

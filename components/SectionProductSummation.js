@@ -2,7 +2,7 @@
 import { useState } from "react";
 import SectionTitle from "@/components/SectionTitle";
 
-export default function ProductSummationSection() {
+export default function SectionProductSummation() {
     // TODO: 設計選擇數量 quantity
 
     const product = {
@@ -17,10 +17,10 @@ export default function ProductSummationSection() {
     // 並將其放置到 optionList 內並於 <select> 中渲染
 
     return (
-        <section id="ProductSummationSection" className="border-b-2 py-14">
+        <section id="SectionProductSummation" className="border-b-2 py-14">
             <div className="container mx-auto px-3">
                 <SectionTitle
-                    title="設計一個商品總價計算程序"
+                    title="2. 設計一個商品總價計算程序"
                     subtitle="利用state特性即時提示使用者商品總價"
                 />
                 <div className="w-1/2 md:w-1/3 rounded-lg overflow-hidden shadow-md">
