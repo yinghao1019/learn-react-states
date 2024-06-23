@@ -10,7 +10,7 @@ export default function OpenAIChatSection() {
     // 這個函數必須將 userMessage POST給後端API讓後端程式可以與OpenAI模型對接
 
     return (
-        <section id="OpenAIChatSection" className="py-10">
+        <section id="OpenAIChatSection" className="py-14 min-h-[800px]">
             <div className="container mx-auto px-3">
                 <SectionTitle
                     title="透過下方介面與OpenAI模型開啟第一段對話吧"

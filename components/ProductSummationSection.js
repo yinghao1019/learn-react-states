@@ -17,7 +17,7 @@ export default function ProductSummationSection() {
     // 並將其放置到 optionList 內並於 <select> 中渲染
 
     return (
-        <section id="ProductSummationSection" className="border-b-2 py-10">
+        <section id="ProductSummationSection" className="border-b-2 py-14">
             <div className="container mx-auto px-3">
                 <SectionTitle
                     title="設計一個商品總價計算程序"

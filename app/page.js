@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import AppHeader from "@/components/AppHeader";
 import IntroSection from "@/components/IntroSection";
 import ProductSummationSection from "@/components/ProductSummationSection";
@@ -7,6 +8,7 @@ import AppFooter from "@/components/AppFooter";
 export default function Home() {
   return (
     <>
+      <Navbar />
       <AppHeader title="認識 React States" />
       {/* 自我介紹產生器 */}
       <IntroSection />

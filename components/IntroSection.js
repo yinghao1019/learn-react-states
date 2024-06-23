@@ -12,7 +12,7 @@ export default function IntroSection() {
     // 關於HTML select tag說明文件: https://www.w3schools.com/tags/tag_select.asp
 
     return (
-        <section id="IntroSection" className="border-b-2 py-10">
+        <section id="IntroSection" className="border-b-2 py-14">
             <div className="container mx-auto px-3">
                 <SectionTitle
                     title="設計一個自我介紹產生器"
