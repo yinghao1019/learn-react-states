@@ -31,7 +31,7 @@ export default function SectionOpenAIChat() {
                     </form>
                 </div>
             </section>
-            <section className="relative z-10 py-14 bg-gradient-to-t from-blue-200 to-white">
+            <section className="relative z-10 py-14 bg-gradient-to-t from-indigo-200 from-10% via-blue-200 via-30% to-white to-90%">
                 <div className="container mx-auto">
                     <div className="">
                         <UserMessage message={{
