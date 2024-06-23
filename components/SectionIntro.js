@@ -15,8 +15,8 @@ export default function SectionIntro() {
         <section id="SectionIntro" className="border-b-2 py-14">
             <div className="container mx-auto px-3">
                 <SectionTitle
-                    title="1. 設計一個自我介紹產生器"
-                    subtitle="state若是被更新，畫面就會被react重新渲染。"
+                    title="2. 設計一個自我介紹產生器"
+                    subtitle="綁定輸入框的改變事件，在輸入框資料改變時即時產生自我介紹。"
                 />
                 <div className="grid grid-cols-2 gap-10">
                     {/* 輸入區 */}

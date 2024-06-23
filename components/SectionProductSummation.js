@@ -20,8 +20,8 @@ export default function SectionProductSummation() {
         <section id="SectionProductSummation" className="border-b-2 py-14">
             <div className="container mx-auto px-3">
                 <SectionTitle
-                    title="2. 設計一個商品總價計算程序"
-                    subtitle="利用state特性即時提示使用者商品總價"
+                    title="3. 設計一個商品總價計算程序"
+                    subtitle="利用state特性即時提示使用者商品總價。"
                 />
                 <div className="w-1/2 md:w-1/3 rounded-lg overflow-hidden shadow-md">
                     <img src={product.imageURL} className="w-full" alt={product.name} />

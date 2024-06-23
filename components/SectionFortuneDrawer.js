@@ -18,7 +18,7 @@ export default function SectionFortuneDrawer() {
         <section id="SectionFortuneDrawer" className="border-b-2 py-14">
             <div className="container mx-auto px-3">
                 <SectionTitle
-                    title="3. 抽張幸運籤"
+                    title="4. 抽張幸運籤"
                     subtitle="設計隨機抽籤功能，並顯示所有抽到的籤詩。"
                 />
                 <div className="my-4 text-center">
