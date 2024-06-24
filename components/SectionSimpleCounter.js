@@ -10,7 +10,6 @@ export default function SectionSimpleCounter() {
             <div className="container mx-auto px-3">
                 <SectionTitle
                     title="1. 簡單計數器"
-                    subtitle="利用state特性讓計數器可以增加或減少數字。"
                 />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -53,7 +52,7 @@ export default function SectionSimpleCounter() {
                             <span className="text-orange-500 font-semibold">0</span>。
                         </h2>
                         <img
-                            className="w-1/2 rounded-2xl shadow-2xl hover:opacity-70 ease-in duration-200"
+                            className="w-2/3 shadow-2xl hover:opacity-70 ease-in duration-200"
                             src="https://picsum.photos/id/908/1200/1200"
                             alt=""
                         />
