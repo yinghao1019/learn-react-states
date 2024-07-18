@@ -3,8 +3,11 @@ import { UserMessage, AIMessage } from "@/components/Message";
 
 export default function SectionOpenAIChat() {
     // TODO: 設計狀態:
-    // 1. 使用者的輸入(userMessage) -> 必須包含文字(text)與資料產生的時間(createdAt)
-    // 2. AI的回覆(aiMessage) -> 必須包含文字(text)與資料產生的時間(createdAt)
+    // 1. 使用者在輸入框上的輸入值(userInput) -> 透過事件取得使用者在輸入框上的輸入值
+    // 2. 所有訊息記錄(messageList) -> 用以儲存所有使用者與AI的訊息
+    // 3. 一則使用者的訊息(userMessage) -> 必須包含文字(text)與資料產生的時間(createdAt)
+    // 4. 一則AI的訊息(aiMessage) -> 必須包含文字(text)與資料產生的時間(createdAt)
+    // 5. 是否在等待後端回應(isWaiting)
 
     // TODO: 設計一個函數負責處理綁定表單送出的事件
     // 這個函數必須將 userMessage POST給後端API讓後端程式可以與OpenAI模型對接
