@@ -9,9 +9,6 @@ export default function Navbar() {
                 <a href="#SectionIntro" className="text-md font-semibold text-stone-500 hover:text-stone-900 mr-4">
                     自我介紹
                 </a>
-                <a href="#SectionFortuneDrawer" className="text-md font-semibold text-stone-500 hover:text-stone-900 mr-4">
-                    抽張幸運籤
-                </a>
                 <a href="#SectionOpenAIChat" className="text-md font-semibold text-stone-500 hover:text-stone-900">
                     與AI對話
                 </a>

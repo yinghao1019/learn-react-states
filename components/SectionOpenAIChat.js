@@ -17,7 +17,7 @@ export default function SectionOpenAIChat() {
             <section id="SectionOpenAIChat" className="py-14 relative z-20">
                 <div className="container mx-auto px-3">
                     <SectionTitle
-                        title="4. 透過下方介面與OpenAI模型開啟第一段對話吧"
+                        title="3. 設計一個 AI ChatBot 應用"
                         subtitle="利用state特性將使用者與AI的對話渲染到畫面上。"
                     />
                     {/* TODO: 綁定表單送出的事件 */}
