@@ -17,9 +17,9 @@ export default function SectionSimpleCounter() {
                             <span className="text-orange-500 font-semibold">5</span>。
                         </h2>
                         <div className="flex">
-                            {/* TODO: 綁定減1按鈕的點擊事件 */}
                             <button
                                 className="w-20 h-20 border-2 border-stone-400 rounded-l-lg block bg-stone-100 hover:bg-stone-200 active:bg-stone-300 text-stone-500 text-2xl font-semibold"
+                            // TODO: 綁定減1按鈕的點擊事件
                             >
                                 減1
                             </button>
@@ -28,23 +28,12 @@ export default function SectionSimpleCounter() {
                                 5
                             </div>
 
-                            {/* TODO: 綁定加1按鈕的點擊事件 */}
                             <button
                                 className="w-20 h-20 border-2 border-stone-400 rounded-r-lg block bg-stone-100 hover:bg-stone-200 active:bg-stone-300 text-stone-500 text-2xl font-semibold"
+                            // TODO: 綁定加1按鈕的點擊事件
                             >
                                 加1
                             </button>
-                        </div>
-                        <div className="mt-10">
-                            <h2 className="text-lg text-stone-500 mb-5">數字n如果大於0，n是多少就要顯示多少顆橄欖球。</h2>
-                            <h3 className="text-3xl">
-                                {/* TODO: 讓橄欖球的數量與n是ㄧ致的 */}
-                                <span className="inline-block mr-3">🏈</span>
-                                <span className="inline-block mr-3">🏈</span>
-                                <span className="inline-block mr-3">🏈</span>
-                                <span className="inline-block mr-3">🏈</span>
-                                <span className="inline-block mr-3">🏈</span>
-                            </h3>
                         </div>
                     </div>
                     <div>
@@ -58,8 +47,6 @@ export default function SectionSimpleCounter() {
                         />
                     </div>
                 </div>
-
-
             </div>
         </section>
     )
