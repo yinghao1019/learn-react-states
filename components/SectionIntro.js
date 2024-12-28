@@ -3,13 +3,15 @@
 // 並且定義此元件成為前端元件(只有前端元件可以使用React Hook)
 
 import SectionTitle from "@/components/SectionTitle";
-// TODO: 引入臺灣城市清單 參考 @/utils/taiwan-cities
+// TODO: 引入臺灣城市清單 參考 @/data/taiwan-cities
 
 export default function SectionIntro() {
     // TODO: 將使用者會輸入的值定義為狀態(state)，讓元件可以將最新的狀態渲染(render)到畫面上
 
     // TODO: 將城市清單渲染成放在<select>內的<option>
     // 關於HTML select tag說明文件: https://www.w3schools.com/tags/tag_select.asp
+
+    const intro = "將我替換為自我介紹內容";
 
     return (
         <section id="SectionIntro" className="border-b-2 py-14">
@@ -27,7 +29,7 @@ export default function SectionIntro() {
                             <input
                                 id="nameInputUI"
                                 type="text"
-                                className="border-2 border-stone-400 focus:border-stone-600 w-full rounded-md text-stone-700 block p-2"
+                                className="border-2 border-stone-400 focus:border-indigo-600 w-full rounded-md text-stone-700 focus:text-indigo-600 block p-2"
                                 placeholder="在此輸入您的姓名"
                             />
                         </div>
@@ -36,7 +38,7 @@ export default function SectionIntro() {
                             {/* TODO: 綁定城市下拉選單的變動事件，並在發生變動時更新城市狀態 */}
                             <select
                                 id="cityInputUI"
-                                className="border-2 border-stone-400 focus:border-stone-600 w-full rounded-md text-stone-700 block p-2"
+                                className="border-2 border-stone-400 focus:border-indigo-600 w-full rounded-md text-stone-700 block p-2"
                             >
 
                             </select>
@@ -47,7 +49,7 @@ export default function SectionIntro() {
                             <input
                                 id="occupationInputUI"
                                 type="text"
-                                className="border-2 border-stone-400 focus:border-stone-600 w-full rounded-md text-stone-700 block p-2"
+                                className="border-2 border-stone-400 focus:border-indigo-600 w-full rounded-md text-stone-700 focus:text-indigo-600 block p-2"
                                 placeholder="在此輸入您的職業"
                             />
                         </div>
@@ -57,8 +59,8 @@ export default function SectionIntro() {
                         <h4 className="text-xl font-semibold text-stone-700 mb-3">自我介紹預覽</h4>
                         {/* TODO: 讓自我介紹呈現在textarea內 */}
                         <textarea
-                            className="border-2 border-stone-400 focus:border-stone-600 min-h-48 w-full rounded-md text-stone-700 block p-3"
-                            value="你好，我的名字叫做XXX是一個住在OOO的KKK。"
+                            className="border-2 border-stone-400 focus:border-indigo-600 min-h-48 w-full rounded-md text-stone-700 focus:text-indigo-600 block p-3"
+                            value={intro}
                             readOnly
                         ></textarea>
                     </div>
