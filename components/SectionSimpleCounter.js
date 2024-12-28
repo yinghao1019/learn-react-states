@@ -37,13 +37,14 @@ export default function SectionSimpleCounter() {
                         </div>
                     </div>
                     <div>
-                        <h2 className="text-lg text-slate-500 mb-5">數字x代表滑鼠游標接觸圖片的次數，現在的x是
+                        <h2 className="text-lg text-slate-500 mb-5">
+                            用一個狀態值 touchCounts 代表滑鼠游標接觸圖片的次數，現在的 touchCounts 是
                             <span className="text-orange-500 font-semibold">0</span>。
                         </h2>
                         <img
                             className="w-2/3 shadow-2xl hover:opacity-70 ease-in duration-200"
                             src="https://picsum.photos/id/908/1200/1200"
-                            alt=""
+                            alt="範例縮圖"
                         />
                     </div>
                 </div>
