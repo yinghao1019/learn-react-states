@@ -24,42 +24,42 @@ export default function SectionIntro() {
                     {/* 輸入區 */}
                     <div className="py-4">
                         <div className="mb-3">
-                            <label htmlFor="nameInputUI" className="text-stone-700 block mb-1">姓名</label>
+                            <label htmlFor="nameInputUI" className="text-slate-700 block mb-1">姓名</label>
                             {/* TODO: 綁定姓名輸入框的變動事件，並在發生變動時更新姓名狀態 */}
                             <input
                                 id="nameInputUI"
                                 type="text"
-                                className="border-2 border-stone-400 focus:border-indigo-600 w-full rounded-md text-stone-700 focus:text-indigo-600 block p-2"
+                                className="border-2 border-slate-400 focus:border-indigo-600 w-full rounded-md text-slate-700 focus:text-indigo-600 block p-2"
                                 placeholder="在此輸入您的姓名"
                             />
                         </div>
                         <div className="mb-3">
-                            <label htmlFor="cityInputUI" className="text-stone-700 block mb-1">居住城市</label>
+                            <label htmlFor="cityInputUI" className="text-slate-700 block mb-1">居住城市</label>
                             {/* TODO: 綁定城市下拉選單的變動事件，並在發生變動時更新城市狀態 */}
                             <select
                                 id="cityInputUI"
-                                className="border-2 border-stone-400 focus:border-indigo-600 w-full rounded-md text-stone-700 block p-2"
+                                className="border-2 border-slate-400 focus:border-indigo-600 w-full rounded-md text-slate-700 block p-2"
                             >
 
                             </select>
                         </div>
                         <div className="mb-3">
-                            <label htmlFor="occupationInputUI" className="text-stone-700 block mb-1">職業</label>
+                            <label htmlFor="occupationInputUI" className="text-slate-700 block mb-1">職業</label>
                             {/* TODO: 綁定職業輸入框的變動事件，並在發生變動時更新職業狀態 */}
                             <input
                                 id="occupationInputUI"
                                 type="text"
-                                className="border-2 border-stone-400 focus:border-indigo-600 w-full rounded-md text-stone-700 focus:text-indigo-600 block p-2"
+                                className="border-2 border-slate-400 focus:border-indigo-600 w-full rounded-md text-slate-700 focus:text-indigo-600 block p-2"
                                 placeholder="在此輸入您的職業"
                             />
                         </div>
                     </div>
                     {/* 預覽區 */}
                     <div className="py-4">
-                        <h4 className="text-xl font-semibold text-stone-700 mb-3">自我介紹預覽</h4>
+                        <h4 className="text-xl font-semibold text-slate-700 mb-3">自我介紹預覽</h4>
                         {/* TODO: 讓自我介紹呈現在textarea內 */}
                         <textarea
-                            className="border-2 border-stone-400 focus:border-indigo-600 min-h-48 w-full rounded-md text-stone-700 focus:text-indigo-600 block p-3"
+                            className="border-2 border-slate-400 focus:border-indigo-600 min-h-48 w-full rounded-md text-slate-700 focus:text-indigo-600 block p-3"
                             value={intro}
                             readOnly
                         ></textarea>

@@ -26,11 +26,11 @@ export default function SectionOpenAIChat() {
                     >
                         <input
                             type="text"
-                            className="flex-1 border-2 border-stone-400 focus:border-stone-600 w-full rounded-md text-stone-700 block p-2"
+                            className="flex-1 border-2 border-slate-400 focus:border-slate-600 w-full rounded-md text-slate-700 block p-2"
                             placeholder="在此輸入你想跟AI講的話吧!"
                             required
                         />
-                        <button className="bg-stone-500 hover:bg-stone-600 active:bg-stone-70 text-white px-6 ml-3 rounded-md">送出</button>
+                        <button className="bg-slate-500 hover:bg-slate-600 active:bg-slate-70 text-white px-6 ml-3 rounded-md">送出</button>
                     </form>
                 </div>
             </section>
