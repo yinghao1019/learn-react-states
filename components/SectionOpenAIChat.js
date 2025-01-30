@@ -3,6 +3,8 @@ import SectionTitle from "@/components/SectionTitle";
 import { UserMessage, AIMessage } from "@/components/Message";
 import { useState } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope,faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 export default function SectionOpenAIChat() {
     // TODO: 設計狀態:
@@ -17,6 +19,7 @@ export default function SectionOpenAIChat() {
 
     const [userInput, setUserInput] = useState("");
     const [messageList, setMessageList] = useState([]);
+    const [isWaiting, setIsWaiting] = useState(false);
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -30,13 +33,17 @@ export default function SectionOpenAIChat() {
         // 新增的訊息擺前面
         setMessageList([userMessage, ...messageList]);
         setUserInput("");
+        setIsWaiting(true);
+        console.log(isWaiting);
         axios.post('/api/chat-ai', userMessage)
             .then((res) => {
                 const aiMessage = res.data;
                 setMessageList(prev => [aiMessage, ...prev]);
+                setIsWaiting(false);
             })
             .catch((err) => {
                 console.log(err);
+                setIsWaiting(false);
             })
     }
 
@@ -69,7 +76,12 @@ export default function SectionOpenAIChat() {
             </section>
             <section className="relative z-10 py-14 bg-gradient-to-t from-indigo-200 from-10% via-blue-200 via-30% to-white to-90%">
                 <div className="container mx-auto">
-                    <div className="">
+                    <div className="px-3">
+                        {
+                            isWaiting && <div className="text-xl animate-pulse">
+                                <p><FontAwesomeIcon icon={faSpinner} className="mr-2 animate-spin"/>AI 正在思考中...</p>
+                            </div>
+                        }
                         {
                             messageList.map((message) => {
                                 const { role } = message;
