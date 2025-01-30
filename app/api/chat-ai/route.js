@@ -6,7 +6,7 @@ export async function POST(request) {
     // TODO: 接收並解析前端傳來的物件
     const userMessage = await request.json();
     console.log(userMessage);
-    const openai = new OpenAI({apiKey: ''});
+    const openai = new OpenAI({apiKey: process.env.OPENAI_API_KEY});
     const completion = await openai.chat.completions.create({
         model: "gpt-4",
         messages: [
