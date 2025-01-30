@@ -4,7 +4,7 @@ import { UserMessage, AIMessage } from "@/components/Message";
 import { useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope,faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 export default function SectionOpenAIChat() {
     // TODO: 設計狀態:
