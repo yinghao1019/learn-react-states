@@ -1,5 +1,8 @@
+"use client"
 import SectionTitle from "@/components/SectionTitle";
 import { UserMessage, AIMessage } from "@/components/Message";
+import { useState } from "react";
+import axios from "axios";
 
 export default function SectionOpenAIChat() {
     // TODO: 設計狀態:
@@ -12,6 +15,31 @@ export default function SectionOpenAIChat() {
     // TODO: 設計一個函數負責處理綁定表單送出的事件
     // 這個函數必須將 userMessage POST給後端API讓後端程式可以與OpenAI模型對接
 
+    const [userInput, setUserInput] = useState("");
+    const [messageList, setMessageList] = useState([]);
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        console.log(userInput);
+
+        const userMessage = {
+            text: userInput,
+            createdAt: Date.now(),
+            role: 'user'
+        }
+        // 新增的訊息擺前面
+        setMessageList([userMessage, ...messageList]);
+        setUserInput("");
+        axios.post('/api/chat-ai', userMessage)
+            .then((res) => {
+                const aiMessage = res.data;
+                setMessageList(prev => [aiMessage, ...prev]);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+
     return (
         <>
             <section id="SectionOpenAIChat" className="py-14 relative z-20">
@@ -23,11 +51,16 @@ export default function SectionOpenAIChat() {
                     {/* TODO: 綁定表單送出的事件 */}
                     <form
                         className="flex"
+                        onSubmit={submitHandler}
                     >
                         <input
                             type="text"
                             className="flex-1 border-2 border-slate-400 focus:border-slate-600 w-full rounded-md text-slate-700 block p-2"
                             placeholder="在此輸入你想跟AI講的話吧!"
+                            value={userInput}
+                            onChange={(e) => setUserInput(e.target.value)}
+                            minLength={2}
+                            maxLength={200}
                             required
                         />
                         <button className="bg-slate-500 hover:bg-slate-600 active:bg-slate-70 text-white px-6 ml-3 rounded-md">送出</button>
@@ -37,14 +70,16 @@ export default function SectionOpenAIChat() {
             <section className="relative z-10 py-14 bg-gradient-to-t from-indigo-200 from-10% via-blue-200 via-30% to-white to-90%">
                 <div className="container mx-auto">
                     <div className="">
-                        <AIMessage message={{
-                            text: "這是一段AI回應的對話範例",
-                            createdAt: 1719149969924
-                        }} />
-                        <UserMessage message={{
-                            text: "這是一段使用者跟AI的對話範例",
-                            createdAt: 1719132962547
-                        }} />
+                        {
+                            messageList.map((message) => {
+                                const { role } = message;
+                                if (role === 'user') {
+                                    return <UserMessage key={message.createdAt} message={message} />
+                                } else {
+                                    return <AIMessage key={message.createdAt} message={message} />
+                                }
+                            })
+                        }
                     </div>
                 </div>
             </section>
